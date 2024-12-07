@@ -2,6 +2,13 @@
 void multiply(int *a, int *b) {
     printf("%d\n", (*a) * (*b));
 }
+void divide(int *c, int *d) {
+    if (*d != 0) {
+        printf("%d\n", (*c) / (*d));
+    } else {
+        printf("Error: Division by zero is not allowed.\n");
+    }
+}
 
 int main(){
     int a, b, i, n;
@@ -21,6 +28,10 @@ int main(){
 		printf("Multiplication of %d and %d = ", a, b);
 		multiply(&a, &b);
 	}
+	else if (i==4){
+		printf("Division of %d and %d = ", a, b);
+		divide(&a, &b);
+	} 
 	else{
 		printf("Invalid input. Please select a valid operation.\n");
 	}
